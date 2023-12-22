@@ -16,8 +16,12 @@ spec:
   - name: annotations
     value:
       autoscaling.knative.dev/minScale: "1"
+  - name: testing_pipeline_matching_labels
+    value:
+      apps.tanzu.vmware.com/pipeline: test
+      apps.tanzu.vmware.com/language: java
   source:
     git:
-      url: <https URL for your generated project's Git repository>
+      url: https://github.com/SergeyMuha/tanzu-java-web.git
       ref:
-        branch: main
+        branch: master
